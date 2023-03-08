@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Burs Başvuru Formu</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    
+    <div class="box-container">
+        <h1><hr/>Burs Başvuru Formu<hr/></h1>
+        <form action="https://formspree.io/f/xyyvnlba" method="post" enctype="multipart/form-data">
+            <fieldset>
+                <legend>A. Kişisel Bilgiler</legend>
+                <table>
+                    <tr>
+                        <td>Ad:</td>
+                        <td>
+                            <input type="text" id="ad" name="ad" placeholder="Adınızı Girin" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Soyad:</td>
+                        <td>
+                            <input type="text" id="soyad" name="soyad" placeholder="Soyadınızı Girin" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Doğum Yeri:</td>
+                        <td>
+                            <select id="Iller" name="Il" required>
+                                <option value="">Lütfen Bir İl Seçin</option>
+                            </select>
+                            <select id="Ilceler" name="Ilce" disabled="disabled" required>
+                                <option value="">Lütfen Önce bir İl seçin</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Doğum Tarihi:</td>
+                        <td>
+                            <input type="date" id="dogumtarihi" name="dogumtarihi" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Cinsiyet:</td>
+                        <td>
+                            <input type="radio" id="cinsiyet" name="cinsiyet" value="Erkek" required>Erkek
+                            <input type="radio" id="cinsiyet" name="cinsiyet" value="Kadın" required>Kadın
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>T.C. No:</td>
+                        <td>
+                            <input type="number" id="tc" name="tc" placeholder="T.C No Girin" minlength="11" maxlength="11" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Mail Adresi:</td>
+                        <td>
+                            <input type="email" id="email" name="email" placeholder="Mail Adresi Girin" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Telefon No:</td>
+                        <td>
+                            <input type="tel" id="tel" name="tel" placeholder="Tel No Girin"required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Vesikalık Fotoğraf:</td>
+                        <td>
+                            <input type="file" id="vesikalık" name="vesikalık" required>
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+            <fieldset>
+                <legend>B. Eğitim Bilgileri</legend>
+                <table>
+                    <tr>
+                        <td>Okuduğunuz Üniversite:</td>
+                        <td>
+                            <input type="text" id="universite" name="universite" placeholder="Üniversite ismini girin" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Program:</td>
+                        <td>
+                            <select id="program" name="program" required>
+                                <option value="">Lütfen Bir Program Seçin</option>
+                                <option value="onlisans">Ön Lisans</option>
+                                <option value="lisans">Lisans</option>
+                                <option value="yükseklisans">Yüksek Lisans</option>
+                                <option value="doktora">Doktora</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Bölüm:</td>
+                        <td>
+                            <input type="text" id="bolum" name="bolum" placeholder="Bölüm ismini girin" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Sınıf:</td>
+                        <td>
+                            <select id="sınıf" name="sınıf" required>
+                                <option value="">Lütfen Bir Sınıf Seçin</option>
+                                <option value="hazırlık">Hazırlık</option>
+                                <option value="sınıf1">1.Sınıf</option>
+                                <option value="sınıf2">2.Sınıf</option>
+                                <option value="sınıf3">3.Sınıf</option>
+                                <option value="sınıf4">4.Sınıf</option>
+                                <option value="sınıf5">5.Sınıf</option>
+                                <option value="sınıf6">6.Sınıf</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Öğrenci Belgesi:</td>
+                        <td>
+                            <input type="file" id="ogrencibelgesi" name="ogrencibelgesi" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>ÖSYM Sonuç Belgesi:</td>
+                        <td>
+                            <input type="file" id="yks" name="yks" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Transkript:</td>
+                        <td>
+                            <input type="file" id="transkript" name="transkript"> 
+                        </td>
+                        <br>
+                           <td>NOT: Transkript belgesini sadece ara sınıfların yüklemesi zorunludur.</td> 
+                    </tr>
+                </table>
+            </fieldset>
+            <fieldset>
+                <legend>C. Aile Bilgileri</legend>
+                    <table>
+                            <tr>   
+                                <h3>BABA:</h3>
+                                <td>Ad:</td>
+                                <td>
+                                    <input type="text" id="babaad" name="babaad" placeholder="Ad Girin" required>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Soyad:</td>
+                                <td>
+                                    <input type="text" id="babasoyad" name="babasoyad" placeholder="Soyad Girin" required>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>T.C. No:</td>
+                                <td>
+                                    <input type="number" id="babatc" name="babatc" placeholder="T.C No Girin" required>
+                                </td>
+                            </tr>
+                                <td>Telefon No:</td>
+                                <td>
+                                    <input type="tel" id="babatel" name="babatel" placeholder="Tel No Girin"required>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Mail Adresi:</td>
+                                <td>
+                                    <input type="email" id="babamail" name="babamail" placeholder="Mail Girin"required>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Meslek:</td>
+                                <td>
+                                    <input type="text" id="babameslek" name="babameslek" placeholder="Meslek Girin" required>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Maaş:</td>
+                                <td>
+                                    <input type="number" id="babamaas" name="babamaas" placeholder="Maaş Girin" required>
+                                </td>
+                            </tr>
+                    </table>
+                    <table>
+                        <tr>  
+                            <h3>ANNE:</h3>
+                            <td>Ad:</td>
+                            <td>
+                                <input type="text" id="annead" name="annead" placeholder="Ad Girin" required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Soyad:</td>
+                            <td>
+                                <input type="text" id="annesoyad" name="annesoyad" placeholder="Soyad Girin" required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>T.C. No:</td>
+                            <td>
+                                <input type="number" id="annetc" name="annetc" placeholder="T.C No Girin" required>
+                            </td>
+                        </tr>
+                            <td>Telefon No:</td>
+                            <td>
+                                <input type="tel" id="annetel" name="annetel" placeholder="Tel No Girin"required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Mail Adresi:</td>
+                            <td>
+                                <input type="email" id="annemail" name="annemail" placeholder="Mail Girin"required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Meslek:</td>
+                            <td>
+                                <input type="text" id="annemeslek" name="annemeslek" placeholder="Meslek Girin" required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Maaş:</td>
+                            <td>
+                                <input type="number" id="annemaas" name="annemaas" placeholder="Maaş Girin" required>
+                            </td>
+                        </tr>
+                </table>
+            </fieldset>
+            <fieldset>
+                <legend>D. Diğer Gerekli Evraklar </legend>
+                <table>
+                    <tr>
+                        <td>Kimlik Fotoğraf:</td>
+                        <td>
+                            Kimlik Ön:<input type="file" id="kimlikön" name="kimlikön" required>
+                        </td>
+                        <td>
+                            Kimlik Arka:<input type="file" id="kimlikarka" name="kimlikarka" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>İkametgah Adresi:</td>
+                        <td>
+                            <input type="file" id="ikametgah" name="ikametgah" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Adli Sicil Kaydı:</td>
+                        <td>
+                            <input type="file" id="adlisicil" name="adlisicil" required>
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+            <fieldset>
+                <legend>E. Sözleşme</legend>
+                <p name="sozlesmemetni">Üniversite öğrencisi olarak eğitimimi sürdürmekte olduğumu, herhangi bir özel kuruluştan burs ve/veya eğitim yardımı
+                almadığımı, burs tahsis edildikten sonra başka bir özel kurum ya da vakıftan yeni bir burs almaya hak kazanmam halinde
+                durumu derhal, en geç 1 hafta içerisinde bildireceğimi, bu durumda bursumun kesileceğini bildiğimi, sözleşmemde ve 
+                müracaat formunda beyan ettiğim bilgilerin ve ibraz ettiğim belgelerin gerçeği yansıtmadığının yada burs tahsis
+                edildikten sonra başka bir özel kurum  yada vakıftan yeni burs aldığımın tespiti halinde bursumun kesileceğini,
+                Aykın Software San.Tic.Ltd.Şti.’den aldığım tüm bursların ve burs miktarının 1,5 katı tutarındaki cezai şartı,
+                tahsis tarihinden itibaren işlemiş yasal faizi ile birlikte Aykın Software San.Ve Ticaret Ltd.Şti.’nin ilk yazılı
+                talebini takiben 7 gün içinde ödeyeceğimi, 7.günün dolması ile temerrüde düşmüş olacağından, başkaca herhangi bir
+                ihtar veya ihbara hacet olmaksızın iş bu maddede bildirilen tutarı kanuni faizi ile birlikte nakden, defaten ve 
+                peşinen ödeyeceğimi, ödememem halinde Aykın Software San.ve Ticaret Ltd.Şti. tarafından ödenmek zorunda kalınacak
+                her türlü icra, dava masrafları vekalet ücretleri ile işleyecek faizleri ve saire tüm giderlerden sorumlu
+                olacağımı kabul ve taahhüt ederim.</p>
+                <input type="checkbox" id="onay" name="onay" value="1" required>
+                <label for="onay">Yukarıda ki sözleşmeyi okudum .</label>
+            </fieldset>
+            <fieldset>
+                <legend>F. Onay</legend>
+                <input type="checkbox" id="onay" name="genelonay" value="1" required>
+                <label for="onay">Yukarıda ki bilgilerin doğruluğunu kabul ediyorum ve sözleşmeyi onaylıyorum.</label>
+                <br><br>
+                <input type="submit" id="btnK" name="btnK" value="Formu Gönder" class="submit">
+                <input type="reset" id="btnT" name="btnT" value="Formu Temizle" class="submit">
+            </fieldset>
+        </form>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
